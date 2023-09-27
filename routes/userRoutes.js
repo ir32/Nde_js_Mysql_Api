@@ -159,5 +159,11 @@ router.get('/cart_get', CartController.getCartItems);
 router.put('/:id', CartController.updateCartItem);
 router.delete('/:id', CartController.deleteCartItem);
 
+//================================================================ Student registation
+const studentRegistrationController = require('../app/controllers/studentRegistrationController');
+
+router.post('/student-registration', studentRegistrationController.studentRegistration);
+
+
 
 module.exports = router;
