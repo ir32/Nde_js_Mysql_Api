@@ -46,6 +46,35 @@ class StudentRegistration {
             throw error;
         }
     }
+    static async allstudent(){
+        var connection = await db.getConnection();
+        var data= await connection.query('Select * from students');
+        connection.release();
+        return data;
+    }
+
+    static async datadelete(data) {
+        console.log(data);
+        var conn = await db.getConnection();
+
+        var query = `DELETE FROM students WHERE student_id = ${data}`;
+
+        try {
+        var result = await conn.query(query);
+        conn.release();
+        
+        if (result.affectedRows === 1) {
+            return { message: 'Data deleted successfully' };
+        } else {
+            return { message: 'Data deleted' };
+        }
+        } catch (error) {
+        console.error(error);
+        throw error;
+        }
+
+    }
+      
 }
 
 module.exports = StudentRegistration;

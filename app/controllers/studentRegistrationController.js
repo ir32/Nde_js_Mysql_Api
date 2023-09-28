@@ -32,6 +32,30 @@ class StudentRegistrationController {
             res.status(500).json({ message: 'Server error' });
         }
     }
+    async getstudent(req,res){
+        try{
+            var data= await student.allstudent();
+            res.json(data);
+        }
+        catch(err){
+            console.log("Error");
+            res.status(500).json({Msg:'Server error'});
+        }
+    }
+    async deletestudent(req,res){
+        try{
+            var data= req.params.id;
+            var result= await student.datadelete(data);
+            if(result){
+                res.json(result);
+    
+            }
+        }
+        catch (err){
+            console.log(err);
+            res.status(500).json({MSG:'Server error'});
+        }
+    }
 }
 
 module.exports = new StudentRegistrationController();

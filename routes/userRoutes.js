@@ -163,7 +163,7 @@ router.delete('/:id', CartController.deleteCartItem);
 const studentRegistrationController = require('../app/controllers/studentRegistrationController');
 
 router.post('/student-registration', studentRegistrationController.studentRegistration);
-
-
+router.get('/All-student',studentRegistrationController.getstudent);
+router.delete('/student/:id',studentRegistrationController.deletestudent);
 
 module.exports = router;
