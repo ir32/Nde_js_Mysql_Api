@@ -56,6 +56,18 @@ class StudentRegistrationController {
             res.status(500).json({MSG:'Server error'});
         }
     }
+    async editstudent(req,res){
+        try{
+            var data = req.params.id;
+            var result= await student.editmodel_student(data);
+            res.json(result);
+
+        }
+        catch(err){
+            console.log(err);
+            res.status(500).json({Msg: 'server error'});
+        }
+    }
 }
 
 module.exports = new StudentRegistrationController();

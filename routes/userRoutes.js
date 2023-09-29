@@ -165,5 +165,6 @@ const studentRegistrationController = require('../app/controllers/studentRegistr
 router.post('/student-registration', studentRegistrationController.studentRegistration);
 router.get('/All-student',studentRegistrationController.getstudent);
 router.delete('/student/:id',studentRegistrationController.deletestudent);
+router.get('/edit-student/:id',studentRegistrationController.editstudent);
 
 module.exports = router;
