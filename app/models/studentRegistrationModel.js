@@ -79,15 +79,18 @@ class StudentRegistration {
     }
     static async editmodel_student(data){
         console.log(data);
-        var conn = await db.getConnection();
-        var query_daat = `select * from students WHERE student_id = ${data}`;
-        try{
-            var result= await conn.query(query_daat);
-            conn.release();
-            return result;
-        } catch(err){
-            console.log(err);
-        }
+        var connection = await db.getConnection();
+        var [rows] = await connection.query(`SELECT * FROM students WHERE student_id = ${data}`);
+        connection.release();
+        return rows;
+        //var query_daat = `select * from students WHERE student_id = ${data}`;
+        // try {
+        //     var result = await conn.query(query_daat);
+        //     conn.release();
+        //     return result;
+        //   } catch (err) {
+        //     console.log(err);
+        //   }
 
     }
       
