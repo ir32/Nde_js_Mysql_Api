@@ -166,5 +166,6 @@ router.post('/student-registration', studentRegistrationController.studentRegist
 router.get('/All-student',studentRegistrationController.getstudent);
 router.delete('/student/:id',studentRegistrationController.deletestudent);
 router.get('/edit-student/:id',studentRegistrationController.editstudent);
+router.put('/update-student/:id',studentRegistrationController.updatestudent);
 
 module.exports = router;

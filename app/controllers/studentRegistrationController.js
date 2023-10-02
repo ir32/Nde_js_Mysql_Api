@@ -68,6 +68,29 @@ class StudentRegistrationController {
             res.status(500).json({Msg: 'server error'});
         }
     }
+    async updatestudent(req, res) {
+        try {
+          const student_id = req.params.id; // Assuming you have the student_id in the request body
+          const updatedData = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            date_of_birth: req.body.date_of_birth,
+            email: req.body.email,
+            phone_number: req.body.phone_number,
+            address: req.body.address,
+            program: req.body.program,
+            graduation_year: req.body.graduation_year
+          };
+      
+          const result = await student.update_student(student_id, updatedData);
+      
+          res.json(result);
+        } catch (error) {
+          console.error('Error updating student data:', error);
+          res.status(500).json({ message: 'Server error' });
+        }
+      }
+      
 }
 
 module.exports = new StudentRegistrationController();
