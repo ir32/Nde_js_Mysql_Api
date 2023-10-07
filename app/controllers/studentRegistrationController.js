@@ -1,4 +1,5 @@
 const student = require('../models/studentRegistrationModel');
+const SubjectHelper = require('../helper/subjectHelper'); 
 
 class StudentRegistrationController { 
     async studentRegistration(req, res) { 
@@ -88,6 +89,18 @@ class StudentRegistrationController {
         } catch (error) {
           console.error('Error updating student data:', error);
           res.status(500).json({ message: 'Server error' });
+        }
+    }
+    async  getallsubject(req, res) {
+        try {
+            const tableName = 'subject'; // Replace with your desired table name
+            //const whereCondition = 'category = "Science"'; // Replace with your desired WHERE condition
+            // const results = await SubjectHelper.getDataByCondition(tableName, whereCondition);
+            const results = await SubjectHelper.getDataByCondition(tableName);
+            res.json(results);
+          } catch (error) {
+            console.error('Error:', error);
+            res.status(500).json({ message: 'Server error' });
         }
       }
       
