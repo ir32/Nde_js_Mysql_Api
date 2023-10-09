@@ -113,14 +113,32 @@ router.post('/workshop/submit', workshopController.submitWorkshop);
 router.post('/postpic', upload.single('image'), AdmissionController.createAdmission);
 router.get('/getpic', AdmissionController.getAdmissions);
 
-//====================================
+//==================================== Auth =============
 
 router.post('/register', RegistrationController.registerUser);
 router.post('/login', RegistrationController.loginUser);
 router.post('/logout', RegistrationController.logoutUser);
 router.get('/check-login', RegistrationController.checkLogin);
-
-
+// New Added for Admin & Role
+router.post('/register-user', (req, res) => {
+  RegistrationController.registerUser(req, res, 'user');
+});
+router.post('/register-admin', (req, res) => {
+  RegistrationController.registerUser(req, res, 'admin');
+});
+function isAdmin(req, res, next) {
+  if (req.session.role === 'admin') {
+    // User is an admin, allow access
+    next();
+  } else {
+    // User is not an admin, deny access
+    res.status(403).json({ message: 'Access denied. Admin role required.' });
+  }
+}
+// Example usage for admin-only routes
+router.get('/admin-dashboard', isAdmin, (req, res) => {
+  // Handle admin dashboard route here
+});
 // ============================================================ Teacher
 
 
@@ -163,7 +181,9 @@ router.delete('/:id', CartController.deleteCartItem);
 const studentRegistrationController = require('../app/controllers/studentRegistrationController');
 
 router.post('/student-registration', studentRegistrationController.studentRegistration);
-router.get('/All-student',studentRegistrationController.getstudent);
+// router.get('/All-student',studentRegistrationController.getstudent);
+router.get('/All-student', isAdmin, studentRegistrationController.getstudent);
+
 router.delete('/student/:id',studentRegistrationController.deletestudent);
 router.get('/edit-student/:id',studentRegistrationController.editstudent);
 router.put('/update-student/:id',studentRegistrationController.updatestudent);
