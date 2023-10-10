@@ -181,8 +181,8 @@ router.delete('/:id', CartController.deleteCartItem);
 const studentRegistrationController = require('../app/controllers/studentRegistrationController');
 
 router.post('/student-registration', studentRegistrationController.studentRegistration);
-// router.get('/All-student',studentRegistrationController.getstudent);
-router.get('/All-student', isAdmin, studentRegistrationController.getstudent);
+ router.get('/All-student',studentRegistrationController.getstudent);
+//router.get('/All-student', isAdmin, studentRegistrationController.getstudent);
 
 router.delete('/student/:id',studentRegistrationController.deletestudent);
 router.get('/edit-student/:id',studentRegistrationController.editstudent);
