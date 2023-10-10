@@ -119,13 +119,16 @@ router.post('/register', RegistrationController.registerUser);
 router.post('/login', RegistrationController.loginUser);
 router.post('/logout', RegistrationController.logoutUser);
 router.get('/check-login', RegistrationController.checkLogin);
+
 // New Added for Admin & Role
 router.post('/register-user', (req, res) => {
   RegistrationController.registerUser(req, res, 'user');
 });
+
 router.post('/register-admin', (req, res) => {
   RegistrationController.registerUser(req, res, 'admin');
 });
+
 function isAdmin(req, res, next) {
   if (req.session.role === 'admin') {
     // User is an admin, allow access
@@ -135,6 +138,7 @@ function isAdmin(req, res, next) {
     res.status(403).json({ message: 'Access denied. Admin role required.' });
   }
 }
+
 // Example usage for admin-only routes
 router.get('/admin-dashboard', isAdmin, (req, res) => {
   // Handle admin dashboard route here

@@ -1,3 +1,4 @@
+// models/registrationModel.js
 const db = require('../config/database');
 const bcrypt = require('bcrypt');
 
@@ -6,20 +7,19 @@ class Registration {
     try {
       // Hash the password using bcrypt
       const hashedPassword = await bcrypt.hash(data.password, 10);
-  
+
       const connection = await db.getConnection();
       const query = 'INSERT INTO registrations (username, password, role) VALUES (?, ?, ?)';
       const values = [data.username, hashedPassword, role];
-  
+
       const [result] = await connection.query(query, values);
       connection.release();
-  
+
       return result.insertId;
     } catch (error) {
       throw error;
     }
   }
-  
 
   static async getUserByUsername(username) {
     try {
