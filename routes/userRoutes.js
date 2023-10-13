@@ -87,7 +87,7 @@ const agentController = new AgentController();
 router.get('/agent_data', agentController.getAgent);
 
 router.get('/agents', agentController.getAgentsByCountryAndStatus);
-
+// ========================================= Product =====================================
 router.post('/products', upload.single('product_image'), ProductController.createProduct);
 
 router.get('/getproducts', ProductController.getProducts);
@@ -138,6 +138,15 @@ function isAdmin(req, res, next) {
     res.status(403).json({ message: 'Access denied. Admin role required.' });
   }
 }
+function isAuthenticated(req, res, next) {
+  if (req.session.userId && req.session.username) {
+    // User is authenticated, allow access
+    next();
+  } else {
+    // User is not authenticated, redirect to the login page or send an error response
+    res.status(401).json({ message: 'Unauthorized' });
+  }
+}
 
 // Example usage for admin-only routes
 router.get('/admin-dashboard', isAdmin, (req, res) => {
@@ -177,7 +186,7 @@ router.post('/insert-data', AcademicController.insertData);
 //============================================================== Cart
 const CartController = require('../app/controllers/cartController');
 router.post('/cart', CartController.createCartItem);
-router.get('/cart_get', CartController.getCartItems);
+router.get('/cart_get',isAuthenticated, CartController.getCartItems);
 router.put('/:id', CartController.updateCartItem);
 router.delete('/:id', CartController.deleteCartItem);
 
