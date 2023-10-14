@@ -87,10 +87,6 @@ const agentController = new AgentController();
 router.get('/agent_data', agentController.getAgent);
 
 router.get('/agents', agentController.getAgentsByCountryAndStatus);
-// ========================================= Product =====================================
-router.post('/products', upload.single('product_image'), ProductController.createProduct);
-
-router.get('/getproducts', ProductController.getProducts);
 
 // Two table data inser at same time
 router.post('/purchases', purchaseController.createPurchase);
@@ -112,6 +108,13 @@ router.post('/workshop/submit', workshopController.submitWorkshop);
   
 router.post('/postpic', upload.single('image'), AdmissionController.createAdmission);
 router.get('/getpic', AdmissionController.getAdmissions);
+
+
+// ========================================= Product =====================================
+router.post('/products', upload.single('product_image'), ProductController.createProduct);
+
+router.get('/getproducts', ProductController.getProducts);
+
 
 //==================================== Auth =============
 
