@@ -88,10 +88,6 @@ router.get('/agent_data', agentController.getAgent);
 
 router.get('/agents', agentController.getAgentsByCountryAndStatus);
 
-router.post('/products', upload.single('product_image'), ProductController.createProduct);
-
-router.get('/getproducts', ProductController.getProducts);
-
 // Two table data inser at same time
 router.post('/purchases', purchaseController.createPurchase);
 
@@ -112,6 +108,13 @@ router.post('/workshop/submit', workshopController.submitWorkshop);
   
 router.post('/postpic', upload.single('image'), AdmissionController.createAdmission);
 router.get('/getpic', AdmissionController.getAdmissions);
+
+
+// ========================================= Product =====================================
+router.post('/products', upload.single('product_image'), ProductController.createProduct);
+
+router.get('/getproducts', ProductController.getProducts);
+
 
 //==================================== Auth =============
 
@@ -136,6 +139,15 @@ function isAdmin(req, res, next) {
   } else {
     // User is not an admin, deny access
     res.status(403).json({ message: 'Access denied. Admin role required.' });
+  }
+}
+function isAuthenticated(req, res, next) {
+  if (req.session.userId && req.session.username) {
+    // User is authenticated, allow access
+    next();
+  } else {
+    // User is not authenticated, redirect to the login page or send an error response
+    res.status(401).json({ message: 'Unauthorized' });
   }
 }
 
@@ -177,7 +189,7 @@ router.post('/insert-data', AcademicController.insertData);
 //============================================================== Cart
 const CartController = require('../app/controllers/cartController');
 router.post('/cart', CartController.createCartItem);
-router.get('/cart_get', CartController.getCartItems);
+router.get('/cart_get',isAuthenticated, CartController.getCartItems);
 router.put('/:id', CartController.updateCartItem);
 router.delete('/:id', CartController.deleteCartItem);
 
