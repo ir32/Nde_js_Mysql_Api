@@ -112,6 +112,8 @@ router.get('/getpic', AdmissionController.getAdmissions);
 
 // ========================================= Product =====================================
 router.post('/products', upload.single('product_image'), ProductController.createProduct);
+router.post('/upload_banner', upload.single('image'), ProductController.createbanner);
+router.get('/get_banner',  ProductController.product_banner);
 
 router.get('/getproducts', ProductController.getProducts);
 

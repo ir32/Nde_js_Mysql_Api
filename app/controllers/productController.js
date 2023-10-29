@@ -30,7 +30,34 @@ class ProductController {
       res.status(500).json({ message: 'Server error' });
     }
   }
+  static async createbanner(req, res) {
+    try {
+      const { image, product, company } = req.body;
+      const imagePath = req.file.path; // Assuming you're using a file upload middleware
 
+      const bannerData = {
+        image: imagePath,
+        product,
+        company,
+      };
+
+      const bannerId = await Product.post_banner(bannerData);
+
+      res.json({ message: 'Banner created successfully', bannerId });
+    } catch (error) {
+      console.error('Error creating banner:', error);
+      res.status(500).json({ message: 'Server error' });
+    }
+  }
+  static async product_banner(req, res) {
+    try {
+      const products = await Product.getbanner();
+      res.json(products);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      res.status(500).json({ message: 'Server error' });
+    }
+  }
 }
 
 
