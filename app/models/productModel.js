@@ -59,7 +59,9 @@ class Product {
         id: row.id,
         product: row.product,
         company: row.company,
-        image: `/${row.image.replace(/\\/g, '/')}`, // Remove the additional '/uploads' segment
+        image: `/uploads/${row.image.split('\\').pop()}`
+        // image: `/${row.image.replace('public\\', '/')}`, // Modify the image path
+        // image: `/${row.image.replace(/\\/g, '/')}`, // Remove the additional '/uploads' segment
       }));
     } catch (error) {
       throw error;
