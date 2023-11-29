@@ -207,4 +207,10 @@ router.get('/edit-student/:id',studentRegistrationController.editstudent);
 router.put('/update-student/:id',studentRegistrationController.updatestudent);
 router.get('/all_subject',studentRegistrationController.getallsubject);
 
+// =================================== career --------------------------------------------------------------------------
+const CareerController = require('../app/controllers/careerController');
+const careerController = new CareerController();
+router.get('/open_job', careerController.dreamJob);
+
+
 module.exports = router;
