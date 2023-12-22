@@ -67,6 +67,32 @@ class Product {
       throw error;
     }
   }
+  static async all_discount_product () {
+    try {
+       const connection = await db.getConnection();
+       const query = 'SELECT * FROM discount_tbl';
+       const [rows] = await connection.query(query);
+       connection.release();
+       return rows;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  static async createDiscountProduct(name, desc_pro, discount_percentage) {
+    try {
+      const connection = await db.getConnection();
+      const query = 'INSERT INTO discount_tbl (name, desc_pro, discount_percentage) VALUES (?, ?, ?)';
+      const values = [name, desc_pro, discount_percentage];
+      await connection.query(query, values);
+      connection.release();
+      return { message: 'Discount product added successfully' };
+    } catch (error) {
+      console.error(error);
+      throw new Error('Error adding discount product');      
+    }
+  
+  }
+  
 }
 
 module.exports = Product;
