@@ -116,7 +116,8 @@ router.post('/upload_banner', upload.single('image'), ProductController.createba
 router.get('/get_banner',  ProductController.product_banner);
 
 router.get('/getproducts', ProductController.getProducts);
-
+router.get('/discount_product',ProductController.get_discount);
+router.post('/post_discount_product',ProductController.post_dis_product);
 
 //==================================== Auth =============
 

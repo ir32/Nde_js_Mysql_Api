@@ -58,6 +58,33 @@ class ProductController {
       res.status(500).json({ message: 'Server error' });
     }
   }
+  static async get_discount (req, res) {
+    try {
+      const data_dis = await Product.all_discount_product();
+      const formattedData = data_dis.map(discount => ({
+        id: discount.id,
+        name: discount.name,
+        desc_pro: discount.desc_pro,
+        discount_percentage: discount.discount_percentage
+      }));
+
+      res.json({ Discount: formattedData })
+      // const data_dis = await Product.all_discount_product();
+      // res.json(data_dis);
+    } catch (error) {
+      res.status(500).json({ message: 'Server error' });    }
+  }
+  static async post_dis_product(req, res) {
+    try {
+      const { name, desc_pro, discount_percentage } = req.body;
+      const result = await Product.createDiscountProduct(name, desc_pro, discount_percentage);
+      res.status(201).json(result);
+
+    } catch (error) {
+      res.status(500).json({ message: 'Server error' });
+
+    }
+  }
 }
 
 
