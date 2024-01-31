@@ -22,6 +22,23 @@ class TeacherController {
             res.status(500).json({ message: 'Server error' });
         }
     }
+
+    async test_user(req, res) {
+        try {
+            const { email, street, city, zipcode } = req.body;
+            const newTeacher1 = await Teacher.create_Test({
+                email,
+                street,
+                city,
+                zipcode,
+            });
+        
+            res.json({ message: 'Teacher created successfully', teacher: newTeacher1 });
+        } catch (error) {
+            console.error('Error creating teacher:', error);
+            res.status(500).json({ message: 'Server error' });
+        }
+    }
 }
 
 module.exports = TeacherController;
