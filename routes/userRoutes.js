@@ -165,6 +165,7 @@ const teacherController = new TeacherController();
 
 router.get('/get_teachers', teacherController.getTeachers);
 router.post('/teachers', teacherController.createTeacher);
+router.post('/test_data', teacherController.test_user);
 
 // ================================================================ Entrance
 

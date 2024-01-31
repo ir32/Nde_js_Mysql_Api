@@ -1,0 +1,2322 @@
+{
+	"info": {
+		"_postman_id": "2e661ed5-4d2d-49f8-82d8-aaa720eb13cf",
+		"name": "Node js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10114510"
+	},
+	"item": [
+		{
+			"name": "Student Registation",
+			"item": [
+				{
+					"name": "Job",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/edit-student/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit-student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/student/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "student registation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Johdsdn sdsfadsdf\",\r\n    \"last_name\": \"Doe sdffsdcsddsz\",\r\n    \"date_of_birth\": \"2000-05-15\",\r\n    \"email\": \"johnsddasdzcscdoez@example.com\",\r\n    \"phone_number\": \"113-457-7890\",\r\n    \"address\": \"123 Main Street, City\",\r\n    \"program\": \"Computer Science\",\r\n    \"graduation_year\": 2023\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/student-registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student-registration"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"test jbjhbhj gfh\",\r\n    \"last_name\": \"test12\",\r\n    \"date_of_birth\": \"1965-05-15\",\r\n    \"email\": \"tesjkjhhjjte@example.com\",\r\n    \"phone_number\": \"153-456-7890\",\r\n    \"address\": \"123 Main Street, Kolkta\",\r\n    \"program\": \"Computer Science\",\r\n    \"graduation_year\": 2023\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/student-registration",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"student-registration"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-SkIDrHsnrC2L3KlrNVVCJSxy+OU\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AiDx6Vt58oyO970jvLLDwNb0-eXvTtS3Z.dh3Jzt5C4itwpg7sRNtY7AtUxEEGmqjwaTnQAw4V2qA; Path=/; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Sep 2023 17:08:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Student data inserted successfully\",\n    \"result\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 1,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "select",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/All-student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"All-student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Update Api",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Updata \",\r\n    \"last_name\": \"data\",\r\n    \"date_of_birth\": \"2000-01-01\",\r\n    \"email\": \"updated_email@example.com\",\r\n    \"phone_number\": \"9876543210\",\r\n    \"address\": \"Updated Address\",\r\n    \"program\": \"Updated Program\",\r\n    \"graduation_year\": 2025\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/update-student/9",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"update-student",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-z9ak8+RDLWH54O+P4H1CokCfiPU\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AGnxP4ihv_TJZTkNtuO2CqO9pis_Ny4B3.mvdyVnrai6E6Q6PkqVziwxkl%2BTVGxJbMU7%2F5URbgUgA; Path=/; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Oct 2023 20:09:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Student data updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get hepler data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OAuth",
+			"item": [
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Khalid Alam\",\r\n  \"password\": \"jsdf1232\"\r\n}\r\n\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"Khalid Alam\",\r\n  \"password\": \"jsdf1232\"\r\n}\r\n\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:3000/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-71uUsMgZY3FdZp9j1h5YMrBIOgg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Oct 2023 18:46:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"Khalid Alam\",\r\n  \"password\": \"jsdf1232\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-EoGH5qYnRaWOO09FcDe0u5PaYn0\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AkS0YXGAa_jpK9FcwNQOIow8js6WuFWi5.BuvkrJIwRao8QAm%2FtgBQETQ%2BrfKavBjKjvXMiHt%2FHbM; Path=/; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jul 2023 16:23:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"userId\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "Registation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"john_doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"asdf123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "registation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"john_doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"asdf123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-GEjVnJTcIX9oXqnm361EW+OLZcs\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jul 2023 15:30:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\",\n    \"userId\": 1\n}"
+						},
+						{
+							"name": "Registation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"user122\",\r\n  \"password\": \"user122\",\r\n  \"role\": \"admin\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-/Sb0Q/NrDPJdx/wTxsog8+Xwsfg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 17:41:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\",\n    \"userId\": 8\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Khalid Alam\",\r\n  \"password\": \"jsdf1232\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/check-login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"check-login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "All Emp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all_employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all_employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 table record",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/getalldatarecord",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getalldatarecord"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "3 table record",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/getalldatarecord",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"getalldatarecord"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "595"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"253-FZQJP2j432JlWbo1jY5/0uTcTzA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Jul 2023 12:52:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"contacts\": [\n        {\n            \"id\": 1,\n            \"name\": \"Ambani\",\n            \"email\": \"ambani@gmail.com\",\n            \"phone\": \"9874561230\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Shahil\",\n            \"email\": \"sahil@gmail.com\",\n            \"phone\": \"9874561230\"\n        }\n    ],\n    \"orders\": [\n        {\n            \"ord_no\": 70001,\n            \"purch_amt\": \"150.5\",\n            \"ord_date\": \"2012-10-05\",\n            \"customer_id\": \"3005\",\n            \"salesman_id\": \"5002\"\n        },\n        {\n            \"ord_no\": 70002,\n            \"purch_amt\": \"65.26\",\n            \"ord_date\": \"2012-10-05\",\n            \"customer_id\": \"3002\",\n            \"salesman_id\": \"5001\"\n        },\n        {\n            \"ord_no\": 70009,\n            \"purch_amt\": \"270.65\",\n            \"ord_date\": \"2012-09-10\",\n            \"customer_id\": \"3001\",\n            \"salesman_id\": \"5005\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"payment_id\": 2005,\n            \"customer_id\": 250,\n            \"staff_id\": 105,\n            \"rental_id\": 250,\n            \"amount\": 205,\n            \"payment_date\": 2005\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Filter by two parameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/agents?country=IND&status=1 ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agents"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "IND"
+								},
+								{
+									"key": "status",
+									"value": "1 "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enter data into two table",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Enter data into two table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"purchase_date\": \"2023-06-18\",\r\n  \"customer_name\": \"John Doe\",\r\n  \"items\": [\r\n    {\r\n      \"item_name\": \"Item 1\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"item_name\": \"Item 2\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/purchases",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"purchases"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-ix1S9gWsQajVCjjNC909+d4Hkfs\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 05:12:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"purchaseId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all contact",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BY id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/5 ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5 "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 11,\r\n        \"name\": \"Rashid 6\",\r\n        \"email\": \"rashid1.khan@gmail.com\",\r\n        \"country\": \"INd\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/userscreate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"userscreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert into two table",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employeeData\": {\r\n    \"name\": \"Jitu Kumar\",\r\n    \"location\": \"UK\"\r\n  },\r\n  \"ageData\": {\r\n    \"age\": 28\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Workshop",
+			"item": [
+				{
+					"name": "Create workshop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"topic\": \"Nodesdf js\",\r\n  \"date\": \"2023-07-22\",\r\n  \"location\": \"Mumbai\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/workshop/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"workshop",
+								"submit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"topic\": \"Node js\",\r\n  \"date\": \"2023-07-22\",\r\n  \"location\": \"Mumbai\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/workshop/submit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"workshop",
+										"submit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-7l78ZDs5tsGpXycxrigo85vHT7E\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Jul 2023 18:17:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Workshop submitted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "workshop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/workshop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"workshop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "doc upload product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/C:/Users/IrfanYounusAlam/Documents/google pixel 7.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Google Pixel 7",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "6000",
+									"type": "default"
+								},
+								{
+									"key": "category_id",
+									"value": "16",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "doc upload single table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Vivo TV",
+											"type": "default"
+										},
+										{
+											"key": "price",
+											"value": "45000",
+											"type": "default"
+										},
+										{
+											"key": "category_id",
+											"value": "7",
+											"type": "default"
+										},
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/C:/Users/Irfan_UI/Downloads/Offer Letter.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-kyDPupvsJ/OHkKZeuq6qSZ5OSh4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 04:15:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"productId\": \n}"
+						}
+					]
+				},
+				{
+					"name": "get product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/getproducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getproducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get pic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/getpic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getpic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "test1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/IrfanYounusAlam/Downloads/car-g9082be8f9_640.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/postpic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"postpic"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "postimage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "Test 1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/IrfanYounusAlam/Downloads/lady-gfebb6610f_1280.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/postpic",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"postpic"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-efapcjRtfdL0rJ8dDPSD2U17v6U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Jul 2023 16:51:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Admission created successfully\",\n    \"admissionId\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "banner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Dell/Downloads/beauty-skin-care-background/728.jpg"
+								},
+								{
+									"key": "product",
+									"value": "phone",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "amazon",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/upload_banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload_banner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "banner",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Dell/Downloads/beauty-skin-care-background/728.jpg"
+										},
+										{
+											"key": "product",
+											"value": "skin care",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "banner1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/upload_banner",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"upload_banner"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-4GBvFWRckcCkamgu77OIKiScyqU\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AsQk6C1Y59mgMWwlTHVC6eZ9l5fbLqO5F.78FbL92KdcHLYu%2FGNfJcLXJH6uTIlZ064UhDOxuZBX0; Path=/; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 16:20:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Banner created successfully\",\n    \"bannerId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "get banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get_banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get_banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "discount product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "post discount data",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "get cart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"username\": \"test\",\r\n        \"password\": \"test\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getemployee data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/employees/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Agent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/agent_data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agent_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create contact by then and catch method",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Khan k\",\r\n  \"email\": \"khank@gmail.com\",\r\n  \"phone\": \"9878568230\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contacts_us",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts_us"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Khan\",\r\n  \"email\": \"khank@gmail.com\",\r\n  \"phone\": \"9878568230\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/contacts_us",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contacts_us"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-WMKtYLip0LKKeel3ehkChw46IiM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 18:07:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Contact data inserted !!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getimage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getpic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getpic"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getimage",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/getpic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getpic"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7a-lCKwdvCXwQkhM+1d0X/WJPNQaAA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jul 2023 16:53:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"hgvh\",\n        \"image\": \"\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Test\",\n        \"image\": \"public\\\\uploads\\\\1690476626812-png-ga05927bf5_640.png\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher_name\": \"Rs Agrawal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/teachers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teachers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"teacher_name\": \"Rs Agrawal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teachers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-gVJBvSO2HJc9eSsAbKJl68yQoi4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Aug 2023 18:59:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Teacher created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "entrance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/get_entrances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get_entrances"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "entrance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/get_entrances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get_entrances"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "335"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14f-OuFNnqOFp54Ma07tGKJx3TLGXV8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Aug 2023 16:57:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"score_id\": 1,\n        \"entrance_roll\": \"159ASR15\",\n        \"obtain_marks\": \"120\",\n        \"total_marks\": \"360\"\n    },\n    {\n        \"score_id\": 2,\n        \"entrance_roll\": \"15620Qmr\",\n        \"obtain_marks\": \"150\",\n        \"total_marks\": \"180\"\n    },\n    {\n        \"score_id\": 3,\n        \"entrance_roll\": \"156520Qmr\",\n        \"obtain_marks\": \"158\",\n        \"total_marks\": \"180\"\n    },\n    {\n        \"score_id\": 4,\n        \"entrance_roll\": \"159520Qmr\",\n        \"obtain_marks\": \"128\",\n        \"total_marks\": \"180\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "entrances",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entrance_roll\": \"156520Qmr\",\r\n  \"obtain_marks\": \"158\",\r\n  \"total_marks\": \"180\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/entrances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entrances"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "entrances",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"entrance_roll\": \"159520Qmr\",\r\n  \"obtain_marks\": \"128\",\r\n  \"total_marks\": \"180\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/entrances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"entrances"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-FTxxnEOpKhh3M33nOA5gs7C4DCk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Aug 2023 16:56:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Entrance data created successfully\",\n    \"entranceId\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "academic",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "post academic",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "submit_subject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sub_code\": \"phubvnb\",\r\n    \"teacher_name\": \"RP Sings\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/submit_subject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"submit_subject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all_academic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/all_academic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"all_academic"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all_academic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all_academic"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-thWblZUh/FVbuTKlOhoijVCYTu0\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3AE_TaTNsJ-r8r4qMMQFNEaCFM-tp8Zqxn.cfiWq6IGB59PI606jQLI0KeSIBdO%2BtJfIzIEzSa108A; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Aug 2023 17:15:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Server error\"\n}"
+				}
+			]
+		},
+		{
+			"name": "post data into two table",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "post request",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"phubvnb@gmail.com\",\r\n    \"street\": \"RP Sings\",\r\n    \"city\" : \"Pune\",\r\n    \"zipcode\" : \"411015\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/test_data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"test_data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"phubvnb@gmail.com\",\r\n    \"street\": \"RP Sings\",\r\n    \"city\" : \"Pune\",\r\n    \"zipcode\" : \"411015\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/test_data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"test_data"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-gVJBvSO2HJc9eSsAbKJl68yQoi4\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3AaJ5llXneRjhER0F3RrhFn0bLAcd0se38.Arq9LC9JXl0nZKHexZWObUxw1JPwL8VQbLHa7CcO4Uk; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Jan 2024 13:09:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Teacher created successfully\"\n}"
+				}
+			]
+		}
+	]
+}

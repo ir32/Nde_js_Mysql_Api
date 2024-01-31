@@ -23,6 +23,18 @@ class Teacher {
             throw error;
         }
     }
+
+    static async create_Test(newTeacher1) {
+        try {
+            const connection = await db.getConnection();
+            const query = 'INSERT INTO test_user (email, street, city, zipcode) VALUES (?, ?, ?, ?)';
+            const values = [newTeacher1.email, newTeacher1.street, newTeacher1.city, newTeacher1.zipcode];
+            await connection.query(query, values);
+            connection.release();
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = Teacher;
