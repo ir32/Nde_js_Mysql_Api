@@ -213,6 +213,7 @@ router.get('/all_subject',studentRegistrationController.getallsubject);
 const CareerController = require('../app/controllers/careerController');
 const careerController = new CareerController();
 router.get('/open_job', careerController.dreamJob);
+router.post('/initiate_razorpay_payment', careerController.initiateRazorpayPayment);
 
 
 module.exports = router;
